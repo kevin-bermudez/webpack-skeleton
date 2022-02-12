@@ -1,8 +1,6 @@
-const prodConfig = require('./webpack.config.prod.js');
-const devConfig = require('./webpack.config.dev.js');
-function webpackEnviromentSelector(env) {
-  if (env.env === 'production') return prodConfig;
-  if (env.env === 'development') return devConfig;
-  return devConfig;
-}
-module.exports = webpackEnviromentSelector;
+const env = process.env.NODE_ENV
+
+module.exports = env => {
+  console.log(`🛠️  running ${env} Mode using ./webpack/webpack.${env}.js 🛠️`);
+  return require(`./webpack/webpack.${env}.js`);
+};

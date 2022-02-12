@@ -1,4 +1,4 @@
-const postcss = require('postcss-cssnext');
 module.exports = {
-  plugins: [postcss],
+  plugins: [require('autoprefixer')],
+  browsers: ['> 0.25%', 'ie >= 11']
 };

@@ -1,4 +1,4 @@
-This Webpack and Sass skeleton.
+# This Webpack and Sass skeleton.
 
 --> <code>npm run build:dev</code><br>
 starts dev server on <code>localhost:8080</code> with livereload, sourcemap
